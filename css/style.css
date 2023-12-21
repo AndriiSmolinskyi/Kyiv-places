@@ -1,0 +1,55 @@
+body { margin: 0; }
+    #mapid { height: 100vh; }
+
+.leaflet-popup-content-wrapper {
+      display: none; /* Приховати попап */
+}
+
+.marker__link {
+    color: white;
+    text-decoration: none; /* Відключити стандартне оформлення посилання */
+}
+
+.posters,
+.posters *,
+.posters *::before,
+.posters *::after {
+    box-sizing: border-box;
+}
+
+.posters {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 100%;   
+    min-height: 100vh;
+}
+
+.posters__content{
+    padding: 50px 25px;
+    max-width: 586px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* overflow-y: auto; */
+
+}
+
+.posters__content__item{
+    width: 100%;
+}
+
+.posters__content__item__img{
+    width: 100%;
+}
+
+.close{
+    font-size: 34px;
+    text-align: end;
+}
+
