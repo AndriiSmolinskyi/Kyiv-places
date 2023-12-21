@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { margin: 0; }
+    #mapid { height: 100vh; }
+
+    .leaflet-popup-content-wrapper {
+      display: none; /* Приховати попап */
+    }
+
+    .marker__link {
+      color: white;
+      text-decoration: none; /* Відключити стандартне оформлення посилання */
+    }
+  </style>
+  <title>Custom Leaflet Map Example</title>
+</head>
+<body>
+    <div id="mapid"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var mymap = L.map('mapid').setView([50.4501, 30.5234], 13);
+
+        // Зміна зуму
+        mymap.setZoom(9.5);
+
+        // Зміна теми на темно-сіру
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        // Масив з координатами та URL для різних маркерів
+        var markersData = [
+          { coordinates: [50.4501, 30.5234], url: 'https://www.youtube.com/watch?v=8b1Zq6GXGIA&t=297s&ab_channel=GoodTimesBadTimes%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0', icon: 'img/gate1.png' },
+          { coordinates: [50.4502, 30.5235], url: 'https://www.example.com', icon: 'img/gate2.png' },
+          // Додайте інші маркери тут
+          // { coordinates: [нові координати], url: 'новий URL', icon: 'новий шлях до маркера' },
+          // І так далі...
+        ];
+
+        // Додаємо кожен маркер до карти
+        markersData.forEach(function(data) {
+          var customIcon = L.icon({
+            iconUrl: data.icon,
+            iconSize: [80, 60],
+            iconAnchor: [25, 50], // змінено якщо центр зображення знаходиться внизу
+            popupAnchor: [5, -30] // змінено для зміщення повідомлення під маркер
+          });
+
+          var marker = L.marker(data.coordinates, { icon: customIcon }).addTo(mymap);
+
+          // Обробник події click для кожного маркера
+          marker.on('click', function() {
+            window.location.href = data.url;
+          });
+        });
+    </script>
+</body>
+</html>
