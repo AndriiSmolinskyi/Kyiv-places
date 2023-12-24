@@ -2,12 +2,11 @@ body { margin: 0; }
     #mapid { height: 100vh; }
 
 .leaflet-popup-content-wrapper {
-      display: none; /* Приховати попап */
+    
 }
 
 .marker__link {
     color: white;
-    text-decoration: none; /* Відключити стандартне оформлення посилання */
 }
 
 .posters,

@@ -22,6 +22,7 @@ let mymap = L.map('mapid').setView([50.4501, 30.5234], 13);
           { coordinates: [50.4190, 30.4365], url: 'https://maps.app.goo.gl/Hg6J4YUTGyDbvKfX6?g_st=ic', icon: 'img/station.png', iconSize: [120, 80] },
           { coordinates: [50.4487, 30.4924], url: 'https://maps.app.goo.gl/bWPcMA3DeurbLFWy6', icon: 'img/cat.png', iconSize: [80, 60] },
           { coordinates: [50.4018, 30.5111], url: 'https://maps.app.goo.gl/uDsF3FsTtBNzMz6u5', icon: 'img/dark.jpg', iconSize: [80, 60] },
+          { coordinates: [50.4018, 30.6111], url: 'https://maps.app.goo.gl/dJ2LL49EFtDQw2m89?g_st=it', icon: 'img/readeat.jpg', iconSize: [80, 80] },
         ];
 
         // Додаємо кожен маркер до карти
@@ -41,7 +42,9 @@ let mymap = L.map('mapid').setView([50.4501, 30.5234], 13);
               const posterBlock = document.querySelector('.posters');
               posterBlock.style.display = 'flex';
             } else{
-              window.open(data.url, '_blank');
+              marker.bindPopup(`
+                <a href="${data.url}" target="_blank">Детальніше</a>
+            `).openPopup();
             }  
           });
 });
