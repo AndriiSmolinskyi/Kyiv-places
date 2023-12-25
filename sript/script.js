@@ -21,8 +21,8 @@ let mymap = L.map('mapid').setView([50.4501, 30.5234], 13);
           { coordinates: [50.3891, 30.5577], url: 'https://www.google.com/maps/place/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9+%D1%96%D1%81%D1%82%D0%BE%D1%80%D1%96%D1%97+%D0%9A%D0%B8%D1%94%D0%B2%D0%B0,+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0+%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE,+7,+%D0%9A%D0%B8%D1%97%D0%B2,+01030/@50.445118,30.5177983,17z/data=!4m6!3m5!1s0x40d4ce581aafa16d:0xfc949d39ffbacfba!8m2!3d50.445118!4d30.5177983!16s%2Fg%2F121_c89c', icon: 'img/toy.png', iconSize: [100, 100] },
           { coordinates: [50.4190, 30.4365], url: 'https://maps.app.goo.gl/Hg6J4YUTGyDbvKfX6?g_st=ic', icon: 'img/station.png', iconSize: [120, 80] },
           { coordinates: [50.4487, 30.4924], url: 'https://maps.app.goo.gl/bWPcMA3DeurbLFWy6', icon: 'img/cat.png', iconSize: [80, 60] },
-          { coordinates: [50.4018, 30.5111], url: 'https://maps.app.goo.gl/uDsF3FsTtBNzMz6u5', icon: 'img/dark.jpg', iconSize: [80, 60] },
-          { coordinates: [50.4118, 30.6111], url: 'https://maps.app.goo.gl/dJ2LL49EFtDQw2m89?g_st=it', icon: 'img/readeat.jpg', iconSize: [60, 70] },
+          { coordinates: [50.4018, 30.5111], url: 'https://maps.app.goo.gl/uDsF3FsTtBNzMz6u5', icon: 'img/dark.png', iconSize: [80, 60] },
+          { coordinates: [50.4118, 30.6111], url: 'https://maps.app.goo.gl/dJ2LL49EFtDQw2m89?g_st=it', icon: 'img/readeat.png', iconSize: [60, 70] },
         ];
 
         // Додаємо кожен маркер до карти
